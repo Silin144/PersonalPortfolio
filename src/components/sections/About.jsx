@@ -1,4 +1,8 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import modulusLogo from "../../assets/modulus.png";
+import shopifyLogo from "../../assets/shopify.png";
+import waterlooLogo from "../../assets/waterloo.png";
+import modernSchoolLogo from "../../assets/modern.jpg";
 
 export const About = () => {
   const frontendSkills = ["React.js", "HTML", "CSS", "JavaScript", "Flask"];
@@ -17,7 +21,11 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-2 transition-all duration-300">
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-              I’m a Computer Science student at the University of Waterloo, deeply passionate about developing AI-driven solutions and scalable web applications, with a focus on leveraging Python, machine learning, and modern tools to craft innovative systems that prioritize performance, usability, and impactful real-world outcomes.
+              I’m a Computer Science student at the University of Waterloo, deeply
+              passionate about developing AI-driven solutions and scalable web
+              applications, with a focus on leveraging Python, machine learning, and
+              modern tools to craft innovative systems that prioritize performance,
+              usability, and impactful real-world outcomes.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -69,45 +77,84 @@ export const About = () => {
               <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <div className="w-20 h-20 bg-gray-700 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"></div>
+                  <img
+                    src={modulusLogo}
+                    alt="Modulus Systems Logo"
+                    className="w-20 h-20 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
+                  />
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-200">Technical Intern</h4>
-                    <p className="text-gray-400">Modulus Systems<br />London, UK</p>
-                    <span className="text-sm text-gray-400 block mt-1">Nov 2022 - Dec 2022</span>
+                    <h4 className="text-lg font-semibold text-gray-200">
+                      Technical Intern
+                    </h4>
+                    <p className="text-gray-400">
+                      Modulus Systems
+                      <br />
+                      London, UK
+                    </p>
+                    <span className="text-sm text-gray-400 block mt-1">
+                      Nov 2022 - Dec 2022
+                    </span>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Contributed to an AI-based project predicting consumer behavior, reducing churn rates by 20%. Designed Python algorithms and integrated them into machine learning pipelines using TensorFlow and Scikit-learn, boosting model training speed by 30% and prediction accuracy by 10%.
+                  Contributed to an AI-based project predicting consumer behavior, reducing
+                  churn rates by 20%. Designed Python algorithms and integrated them into
+                  machine learning pipelines using TensorFlow and Scikit-learn, boosting model
+                  training speed by 30% and prediction accuracy by 10%.
                 </p>
               </div>
 
               <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
                 <div className="flex items-center mb-4 flex-row-reverse">
                   <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <div className="w-20 h-20 bg-gray-700 rounded-lg ml-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"></div>
+                  <img
+                    src={modulusLogo}
+                    alt="Modulus Systems Logo"
+                    className="w-20 h-20 rounded-lg ml-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
+                  />
                   <div className="flex-1 text-right">
                     <h4 className="text-lg font-semibold text-gray-200">Intern</h4>
-                    <p className="text-gray-400">Modulus Systems<br />London, UK</p>
-                    <span className="text-sm text-gray-400 block mt-1">Apr 2021 - Jun 2021</span>
+                    <p className="text-gray-400">
+                      Modulus Systems
+                      <br />
+                      London, UK
+                    </p>
+                    <span className="text-sm text-gray-400 block mt-1">
+                      Apr 2021 - Jun 2021
+                    </span>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed text-right">
-                  Enhanced digital campaigns, increasing monthly visitors by 75% (from 1,000 to 4,000) using Google Analytics and social media insights. Collaborated with teams to design promotional materials and improve online user engagement.
+                  Enhanced digital campaigns, increasing monthly visitors by 75% (from 1,000 to
+                  4,000) using Google Analytics and social media insights. Collaborated with teams
+                  to design promotional materials and improve online user engagement.
                 </p>
               </div>
 
               <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <div className="w-20 h-20 bg-gray-700 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"></div>
+                  <img
+                    src={shopifyLogo}
+                    alt="Shopify Logo"
+                    className="w-20 h-20 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
+                  />
                   <div className="flex-1">
                     <h4 className="text-lg font-semibold text-gray-200">Founder</h4>
-                    <p className="text-gray-400">Dropshipping Online Store<br />Remote</p>
-                    <span className="text-sm text-gray-400 block mt-1">Jun 2019 - Dec 2019</span>
+                    <p className="text-gray-400">
+                      Dropshipping Online Store
+                      <br />
+                      Remote
+                    </p>
+                    <span className="text-sm text-gray-400 block mt-1">
+                      Jun 2019 - Dec 2019
+                    </span>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Built and managed a Shopify store generating $20,000 in revenue over six months across the USA, Canada, New Zealand, and the UK. Leveraged Facebook and Instagram ads for a 5% conversion rate and automated email campaigns to boost retention by 10%.
+                  Built and managed a Shopify store generating $20,000 in revenue over six months
+                  across the USA, Canada, New Zealand, and the UK. Leveraged Facebook and Instagram
+                  ads for a 5% conversion rate and automated email campaigns to boost retention by 10%.
                 </p>
               </div>
 
@@ -118,30 +165,57 @@ export const About = () => {
               <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
                 <div className="flex items-center mb-4 flex-row-reverse">
                   <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <div className="w-20 h-20 bg-gray-700 rounded-lg ml-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"></div>
+                  <img
+                    src={waterlooLogo}
+                    alt="University of Waterloo Logo"
+                    className="w-20 h-20 rounded-lg ml-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
+                  />
                   <div className="flex-1 text-right">
-                    <h4 className="text-lg font-semibold text-gray-200">Bachelor of Computer Science</h4>
-                    <p className="text-gray-400">University of Waterloo<br />Waterloo, ON, Canada</p>
-                    <span className="text-sm text-gray-400 block mt-1">Sep 2024 - Present</span>
+                    <h4 className="text-lg font-semibold text-gray-200">
+                      Bachelor of Computer Science
+                    </h4>
+                    <p className="text-gray-400">
+                      University of Waterloo
+                      <br />
+                      Waterloo, ON, Canada
+                    </p>
+                    <span className="text-sm text-gray-400 block mt-1">
+                      Sep 2024 - Present
+                    </span>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed text-right">
-                  Relevant Coursework: Designing Functional Programs, Linear Algebra, Calculus, Object-Oriented Programming, Data Structures, Algorithms. Awards: President's Scholarship of Distinction.
+                  Relevant Coursework: Designing Functional Programs, Linear Algebra, Calculus,
+                  Object-Oriented Programming, Data Structures, Algorithms. Awards: President's
+                  Scholarship of Distinction.
                 </p>
               </div>
 
               <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
                 <div className="flex items-center mb-4">
                   <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <div className="w-20 h-20 bg-gray-700 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"></div>
+                  <img
+                    src={modernSchoolLogo}
+                    alt="Modern School Logo"
+                    className="w-20 h-20 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
+                  />
                   <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-200">High School Diploma, PCM-CS</h4>
-                    <p className="text-gray-400">Modern School<br />New Delhi, India</p>
-                    <span className="text-sm text-gray-400 block mt-1">2020 - 2024</span>
+                    <h4 className="text-lg font-semibold text-gray-200">
+                      High School Diploma, PCM-CS
+                    </h4>
+                    <p className="text-gray-400">
+                      Modern School
+                      <br />
+                      New Delhi, India
+                    </p>
+                    <span className="text-sm text-gray-400 block mt-1">
+                      2020 - 2024
+                    </span>
                   </div>
                 </div>
                 <p className="text-gray-300 leading-relaxed">
-                  Grade: 12th - 96.2%. Activities and societies: Bits n' Bytes (CS Club), Science Club.
+                  Grade: 12th - 96.2%. Activities and societies: Bits n' Bytes (CS Club), Science
+                  Club.
                 </p>
               </div>
             </div>
