@@ -21,7 +21,7 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-2 transition-all duration-300">
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-              I’m a Computer Science student at the University of Waterloo, deeply
+              I am a Computer Science student at the University of Waterloo, deeply
               passionate about developing AI-driven solutions and scalable web
               applications, with a focus on leveraging Python, machine learning, and
               modern tools to craft innovative systems that prioritize performance,
@@ -158,7 +158,7 @@ export const About = () => {
                 </p>
               </div>
 
-              {/* Education Section */}
+              {/* Education Section*/}
               <h4 className="text-xl font-semibold mb-8 text-center bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                 Education
               </h4>
