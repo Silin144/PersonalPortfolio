@@ -18,7 +18,7 @@ export const Contact = () => {
 
     emailjs
       .sendForm(
-        "service_9l8nxhs",   // Service ID
+        "service_8ucwkgo",   // Service ID
         "template_z12zj9a",  // Template ID
         e.target,
         "q32j_dMJmIB652ipJ"  // Public API Key (passed again if required by sendForm)
@@ -67,7 +67,7 @@ export const Contact = () => {
                 required
                 value={formData.email}
                 className="w-full bg-white/5 border border-white/10 rounded px-4 py-3 text-white transition focus:outline-none focus:border-blue-500 focus:bg-blue-500/5"
-                placeholder="example@gmail.com"
+                placeholder="johndoe@example.com"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
