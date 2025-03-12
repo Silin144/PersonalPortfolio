@@ -8,10 +8,69 @@ export const About = () => {
   const frontendSkills = ["React.js", "HTML", "CSS", "JavaScript", "Flask"];
   const backendSkills = ["Python", "SQL", "MySQL", "MongoDB", "Pandas"];
 
+  // Timeline data for dynamic rendering
+  const timelineData = [
+    {
+      id: 1,
+      logo: modulusLogo,
+      company: "Modulus Systems",
+      title: "Technical Intern",
+      location: "London, UK",
+      duration: "Nov 2022 - Dec 2022",
+      description:
+        "Contributed to an AI-based project predicting consumer behavior, reducing churn rates by 20%. Designed Python algorithms and integrated them into machine learning pipelines using TensorFlow and Scikit-learn, boosting model training speed by 30% and prediction accuracy by 10%.",
+      category: "Experience",
+    },
+    {
+      id: 2,
+      logo: modulusLogo,
+      company: "Modulus Systems",
+      title: "Intern",
+      location: "London, UK",
+      duration: "Apr 2021 - Jun 2021",
+      description:
+        "Enhanced digital campaigns, increasing monthly visitors by 75% (from 1,000 to 4,000) using Google Analytics and social media insights. Collaborated with teams to design promotional materials and improve online user engagement.",
+      category: "Experience",
+    },
+    {
+      id: 3,
+      logo: shopifyLogo,
+      company: "Dropshipping Online Store",
+      title: "Founder",
+      location: "Remote",
+      duration: "Jun 2019 - Dec 2019",
+      description:
+        "Built and managed a Shopify store generating $20,000 in revenue over six months across the USA, Canada, New Zealand, and the UK. Leveraged Facebook and Instagram ads for a 5% conversion rate and automated email campaigns to boost retention by 10%.",
+      category: "Experience",
+    },
+    {
+      id: 4,
+      logo: waterlooLogo,
+      company: "University of Waterloo",
+      title: "Bachelor of Computer Science",
+      location: "Waterloo, ON, Canada",
+      duration: "Sep 2024 - Present",
+      description:
+        "Relevant Coursework: Designing Functional Programs, Linear Algebra, Calculus, Object-Oriented Programming, Data Structures, Algorithms. Awards: President's Scholarship of Distinction.",
+      category: "Education",
+    },
+    {
+      id: 5,
+      logo: modernSchoolLogo,
+      company: "Modern School",
+      title: "High School Diploma, PCM-CS",
+      location: "New Delhi, India",
+      duration: "2020 - 2024",
+      description:
+        "Grade: 12th - 96.2%. Activities and societies: Bits n' Bytes (CS Club), Science Club.",
+      category: "Education",
+    },
+  ];
+
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20"
+      className="min-h-screen flex items-center justify-center py-20 bg-[#0a0a0a]"
     >
       <RevealOnScroll>
         <div className="max-w-4xl mx-auto px-4">
@@ -30,7 +89,7 @@ export const About = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="rounded-xl p-6 bg-gray-800/30 hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-4">Frontend</h3>
+                <h3 className="text-lg font-bold mb-4">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
                   {frontendSkills.map((tech, key) => (
                     <span
@@ -45,7 +104,7 @@ export const About = () => {
               </div>
 
               <div className="rounded-xl p-6 bg-gray-800/30 hover:-translate-y-1 transition-all duration-300">
-                <h3 className="text-xl font-bold mb-4">Backend</h3>
+                <h3 className="text-lg font-bold mb-4">Backend</h3>
                 <div className="flex flex-wrap gap-2">
                   {backendSkills.map((tech, key) => (
                     <span
@@ -63,161 +122,98 @@ export const About = () => {
 
           {/* Timeline Section */}
           <div className="mt-16">
-            <h3 className="text-2xl font-bold mb-10 text-center bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+            <h3 className="text-2xl font-bold mb-10 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
               My Journey
             </h3>
             <div className="relative">
-              {/* Vertical Line */}
-              <div className="absolute w-1 bg-gradient-to-b from-blue-500/30 to-cyan-400/30 h-full left-1/2 transform -translate-x-1/2 z-0"></div>
+              <style>
+                {`
+                  .timeline-line {
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    background: rgba(59, 130, 246, 0.2); /* Solid color, no fade */
+                    z-index: 0;
+                  }
+                  .timeline-item {
+                    position: relative;
+                    z-index: 1;
+                    display: flex;
+                    align-items: flex-start;
+                    width: 100%;
+                    margin-bottom: 3rem;
+                  }
+                  .timeline-content {
+                    width: 45%;
+                    background: #0a0a0a; /* Match website background */
+                    padding: 1rem;
+                    border-radius: 0.75rem; /* Rounded corners */
+                    text-align: left;
+                  }
+                  .left-align .timeline-content {
+                    margin-right: auto;
+                  }
+                  .right-align .timeline-content {
+                    margin-left: auto;
+                  }
+                  .timeline-bullet {
+                    position: absolute;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 10;
+                  }
+                `}
+              </style>
+              <div className="timeline-line"></div>
 
-              {/* Experience Section */}
-              <h4 className="text-xl font-semibold mb-8 text-center bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                Experience
-              </h4>
-              <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <img
-                    src={modulusLogo}
-                    alt="Modulus Systems Logo"
-                    className="w-20 h-20 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
-                  />
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-200">
-                      Technical Intern
+              {timelineData.map((item, index) => (
+                <div key={item.id}>
+                  {/* Add "Experience" heading before the first Experience item */}
+                  {item.category === "Experience" && index === 0 && (
+                    <h4 className="text-xl font-semibold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+                      Experience
                     </h4>
-                    <p className="text-gray-400">
-                      Modulus Systems
-                      <br />
-                      London, UK
-                    </p>
-                    <span className="text-sm text-gray-400 block mt-1">
-                      Nov 2022 - Dec 2022
-                    </span>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Contributed to an AI-based project predicting consumer behavior, reducing
-                  churn rates by 20%. Designed Python algorithms and integrated them into
-                  machine learning pipelines using TensorFlow and Scikit-learn, boosting model
-                  training speed by 30% and prediction accuracy by 10%.
-                </p>
-              </div>
-
-              <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
-                <div className="flex items-center mb-4 flex-row-reverse">
-                  <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <img
-                    src={modulusLogo}
-                    alt="Modulus Systems Logo"
-                    className="w-20 h-20 rounded-lg ml-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
-                  />
-                  <div className="flex-1 text-right">
-                    <h4 className="text-lg font-semibold text-gray-200">Intern</h4>
-                    <p className="text-gray-400">
-                      Modulus Systems
-                      <br />
-                      London, UK
-                    </p>
-                    <span className="text-sm text-gray-400 block mt-1">
-                      Apr 2021 - Jun 2021
-                    </span>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed text-right">
-                  Enhanced digital campaigns, increasing monthly visitors by 75% (from 1,000 to
-                  4,000) using Google Analytics and social media insights. Collaborated with teams
-                  to design promotional materials and improve online user engagement.
-                </p>
-              </div>
-
-              <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <img
-                    src={shopifyLogo}
-                    alt="Shopify Logo"
-                    className="w-20 h-20 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
-                  />
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-200">Founder</h4>
-                    <p className="text-gray-400">
-                      Dropshipping Online Store
-                      <br />
-                      Remote
-                    </p>
-                    <span className="text-sm text-gray-400 block mt-1">
-                      Jun 2019 - Dec 2019
-                    </span>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Built and managed a Shopify store generating $20,000 in revenue over six months
-                  across the USA, Canada, New Zealand, and the UK. Leveraged Facebook and Instagram
-                  ads for a 5% conversion rate and automated email campaigns to boost retention by 10%.
-                </p>
-              </div>
-
-              {/* Education Section*/}
-              <h4 className="text-xl font-semibold mb-8 text-center bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-                Education
-              </h4>
-              <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
-                <div className="flex items-center mb-4 flex-row-reverse">
-                  <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <img
-                    src={waterlooLogo}
-                    alt="University of Waterloo Logo"
-                    className="w-20 h-20 rounded-lg ml-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
-                  />
-                  <div className="flex-1 text-right">
-                    <h4 className="text-lg font-semibold text-gray-200">
-                      Bachelor of Computer Science
+                  )}
+                  {/* Add "Education" heading before the first Education item */}
+                  {item.category === "Education" && timelineData[index - 1]?.category === "Experience" && (
+                    <h4 className="text-xl font-semibold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+                      Education
                     </h4>
-                    <p className="text-gray-400">
-                      University of Waterloo
-                      <br />
-                      Waterloo, ON, Canada
-                    </p>
-                    <span className="text-sm text-gray-400 block mt-1">
-                      Sep 2024 - Present
-                    </span>
+                  )}
+                  <div
+                    className={`timeline-item ${
+                      index % 2 === 0 ? "left-align" : "right-align"
+                    }`}
+                  >
+                    <div className="timeline-content">
+                      <img
+                        src={item.logo}
+                        alt={`${item.company} Logo`}
+                        className="w-20 h-20 rounded-lg mb-4"
+                      />
+                      <p className="text-gray-300">
+                        {item.title}
+                        <br />
+                        {item.company}
+                        <br />
+                        {item.location}
+                        <br />
+                        {item.duration}
+                      </p>
+                      <p className="text-gray-300 mt-4 leading-relaxed">
+                        {item.description}
+                      </p>
+                    </div>
+                    <div className="timeline-bullet">
+                      <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full z-10"></div>
+                    </div>
                   </div>
                 </div>
-                <p className="text-gray-300 leading-relaxed text-right">
-                  Relevant Coursework: Designing Functional Programs, Linear Algebra, Calculus,
-                  Object-Oriented Programming, Data Structures, Algorithms. Awards: President's
-                  Scholarship of Distinction.
-                </p>
-              </div>
-
-              <div className="mb-12 relative group hover:bg-gray-800/20 rounded-lg p-6 transition-all duration-300">
-                <div className="flex items-center mb-4">
-                  <div className="w-5 h-5 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full absolute left-1/2 transform -translate-x-1/2 z-10 group-hover:scale-125 transition-transform duration-200"></div>
-                  <img
-                    src={modernSchoolLogo}
-                    alt="Modern School Logo"
-                    className="w-20 h-20 rounded-lg mr-6 group-hover:shadow-[0_0_12px_rgba(59,130,246,0.3)] transition-shadow duration-300"
-                  />
-                  <div className="flex-1">
-                    <h4 className="text-lg font-semibold text-gray-200">
-                      High School Diploma, PCM-CS
-                    </h4>
-                    <p className="text-gray-400">
-                      Modern School
-                      <br />
-                      New Delhi, India
-                    </p>
-                    <span className="text-sm text-gray-400 block mt-1">
-                      2020 - 2024
-                    </span>
-                  </div>
-                </div>
-                <p className="text-gray-300 leading-relaxed">
-                  Grade: 12th - 96.2%. Activities and societies: Bits n' Bytes (CS Club), Science
-                  Club.
-                </p>
-              </div>
+              ))}
             </div>
           </div>
         </div>
