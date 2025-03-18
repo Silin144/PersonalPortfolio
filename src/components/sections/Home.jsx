@@ -1,6 +1,7 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import SilinResume from "../../assets/Silin.pdf";
 import LetterGlitch from "../decrypt";
+import SplashCursor from "../SplashCursor";
 
 export const Home = () => {
   return (
@@ -8,6 +9,22 @@ export const Home = () => {
       id="home"
       className="min-h-screen flex items-center justify-center relative"
     >
+      <SplashCursor
+        SIM_RESOLUTION={128}
+        DYE_RESOLUTION={1440}
+        CAPTURE_RESOLUTION={512}
+        DENSITY_DISSIPATION={3.5}
+        VELOCITY_DISSIPATION={2}
+        PRESSURE={0.1}
+        PRESSURE_ITERATIONS={20}
+        CURL={3}
+        SPLAT_RADIUS={0.2}
+        SPLAT_FORCE={6000}
+        SHADING={true}
+        COLOR_UPDATE_SPEED={10}
+        BACK_COLOR={{ r: 0.5, g: 0, b: 0 }}
+        TRANSPARENT={true}
+      />
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
