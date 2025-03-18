@@ -1,6 +1,6 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-// Import your PDF file from the relative path
 import SilinResume from "../../assets/Silin.pdf";
+import LetterGlitch from "../decrypt";
 
 export const Home = () => {
   return (
@@ -10,18 +10,29 @@ export const Home = () => {
     >
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
             Hi, I'm Silin
           </h1>
 
-          <p className="tex-gray-400 text-lg mb-8 max-w-lg mx-auto">
-            I’m a Computer Science student at the University of Waterloo, deeply
-            passionate about developing AI-driven solutions and scalable web
-            applications, with a focus on leveraging Python, machine learning,
-            and modern tools to craft innovative systems that prioritize
-            performance, usability, and impactful real-world outcomes.
-          </p>
-
+          {/* Animated paragraph with LetterGlitch */}
+          <div className="max-w-4xl mx-auto mb-12">
+            <LetterGlitch
+              text="I'm a Computer Science student at the University of Waterloo, deeply passionate about developing AI-driven solutions and scalable web applications, with a focus on leveraging Python, machine learning, and modern tools to craft innovative systems that prioritize performance, usability, and impactful real-world outcomes."
+              glitchColors={['#60a5fa', '#06b6d4', '#3b82f6', '#0ea5e9']}
+              glitchSpeed={30}
+              centerVignette={true}
+              outerVignette={false}
+              smooth={true}
+              style={{ 
+                transitionDelay: '2000ms',
+                height: '250px',
+                fontSize: '1.25rem',
+                lineHeight: '2rem',
+                padding: '2rem 0'
+              }}
+              className="font-medium"
+            />
+          </div>
           <div className="flex justify-center space-x-4">
             {/* View Projects */}
             <a

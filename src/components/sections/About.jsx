@@ -78,7 +78,7 @@ export const About = () => {
             About Me
           </h2>
 
-          <div className="rounded-xl p-8 border-white/10 border hover:-translate-y-2 transition-all duration-300">
+          <div className="rounded-xl p-8 border-white/10 border bg-[#0a0a0a] hover:-translate-y-2 transition-all duration-300">
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
               I am a Computer Science student at the University of Waterloo, deeply
               passionate about developing AI-driven solutions and scalable web
@@ -88,7 +88,7 @@ export const About = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 bg-gray-800/30 hover:-translate-y-1 transition-all duration-300">
+              <div className="rounded-xl p-6 bg-[#0a0a0a] border border-white/10 hover:-translate-y-1 transition-all duration-300">
                 <h3 className="text-lg font-bold mb-4">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
                   {frontendSkills.map((tech, key) => (
@@ -103,7 +103,7 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl p-6 bg-gray-800/30 hover:-translate-y-1 transition-all duration-300">
+              <div className="rounded-xl p-6 bg-[#0a0a0a] border border-white/10 hover:-translate-y-1 transition-all duration-300">
                 <h3 className="text-lg font-bold mb-4">Backend</h3>
                 <div className="flex flex-wrap gap-2">
                   {backendSkills.map((tech, key) => (
@@ -134,7 +134,7 @@ export const About = () => {
                     height: 100%;
                     left: 50%;
                     transform: translateX(-50%);
-                    background: rgba(59, 130, 246, 0.2); /* Solid color, no fade */
+                    background: rgba(59, 130, 246, 0.2);
                     z-index: 0;
                   }
                   .timeline-item {
@@ -147,10 +147,11 @@ export const About = () => {
                   }
                   .timeline-content {
                     width: 45%;
-                    background: #0a0a0a; /* Match website background */
+                    background: #0a0a0a;
                     padding: 1rem;
-                    border-radius: 0.75rem; /* Rounded corners */
+                    border-radius: 0.75rem;
                     text-align: left;
+                    border: 1px solid rgba(255, 255, 255, 0.1);
                   }
                   .left-align .timeline-content {
                     margin-right: auto;
