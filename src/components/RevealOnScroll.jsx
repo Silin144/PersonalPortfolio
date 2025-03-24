@@ -8,15 +8,23 @@ export const RevealOnScroll = ({ children }) => {
       ([entry]) => {
         if (entry.isIntersecting) {
           ref.current.classList.add("visible");
+        } else {
+          ref.current.classList.remove("visible");
         }
       },
-      { threshold: 0.2, rootMargin: "0px 0px -50px 0px" }
+      { threshold: 0.1 }
     );
 
-    if (ref.current) observer.observe(ref.current);
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
 
-    return () => observer.disconnect();
-  });
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, []);
 
   return (
     <div ref={ref} className="reveal">

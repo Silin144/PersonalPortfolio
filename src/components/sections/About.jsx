@@ -70,7 +70,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center py-20 bg-[#0a0a0a]"
+      className="min-h-screen flex items-center justify-center py-20 relative z-10"
     >
       <RevealOnScroll>
         <div className="max-w-4xl mx-auto px-4">
@@ -78,7 +78,7 @@ export const About = () => {
             About Me
           </h2>
 
-          <div className="rounded-xl p-8 border-white/10 border bg-[#0a0a0a] hover:-translate-y-2 transition-all duration-300">
+          <div className="rounded-xl p-8 border-white/10 border bg-black/20 backdrop-blur-sm hover:-translate-y-2 transition-all duration-300">
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
               I am a Computer Science student at the University of Waterloo,
               deeply passionate about developing AI-driven solutions and
@@ -89,7 +89,7 @@ export const About = () => {
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="rounded-xl p-6 bg-[#0a0a0a] border border-white/10 hover:-translate-y-1 transition-all duration-300">
+              <div className="rounded-xl p-6 bg-black/20 backdrop-blur-sm border border-white/10 hover:-translate-y-1 transition-all duration-300">
                 <h3 className="text-lg font-bold mb-4">Frontend</h3>
                 <div className="flex flex-wrap gap-2">
                   {frontendSkills.map((tech, key) => (
@@ -103,7 +103,7 @@ export const About = () => {
                 </div>
               </div>
 
-              <div className="rounded-xl p-6 bg-[#0a0a0a] border border-white/10 hover:-translate-y-1 transition-all duration-300">
+              <div className="rounded-xl p-6 bg-black/20 backdrop-blur-sm border border-white/10 hover:-translate-y-1 transition-all duration-300">
                 <h3 className="text-lg font-bold mb-4">Backend</h3>
                 <div className="flex flex-wrap gap-2">
                   {backendSkills.map((tech, key) => (
@@ -146,7 +146,8 @@ export const About = () => {
                   }
                   .timeline-content {
                     width: 45%;
-                    background: #0a0a0a;
+                    background: rgba(0, 0, 0, 0.2);
+                    backdrop-filter: blur(8px);
                     padding: 1rem;
                     border-radius: 0.75rem;
                     text-align: left;
