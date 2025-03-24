@@ -80,11 +80,12 @@ export const About = () => {
 
           <div className="rounded-xl p-8 border-white/10 border bg-[#0a0a0a] hover:-translate-y-2 transition-all duration-300">
             <p className="text-gray-300 mb-6 text-lg leading-relaxed">
-              I am a Computer Science student at the University of Waterloo, deeply
-              passionate about developing AI-driven solutions and scalable web
-              applications, with a focus on leveraging Python, machine learning, and
-              modern tools to craft innovative systems that prioritize performance,
-              usability, and impactful real-world outcomes.
+              I am a Computer Science student at the University of Waterloo,
+              deeply passionate about developing AI-driven solutions and
+              scalable web applications, with a focus on leveraging Python,
+              machine learning, and modern tools to craft innovative systems
+              that prioritize performance, usability, and impactful real-world
+              outcomes.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -94,8 +95,7 @@ export const About = () => {
                   {frontendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-200"
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-200"
                     >
                       {tech}
                     </span>
@@ -109,8 +109,7 @@ export const About = () => {
                   {backendSkills.map((tech, key) => (
                     <span
                       key={key}
-                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 
-                                    hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-200"
+                      className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition-all duration-200"
                     >
                       {tech}
                     </span>
@@ -180,11 +179,12 @@ export const About = () => {
                     </h4>
                   )}
                   {/* Add "Education" heading before the first Education item */}
-                  {item.category === "Education" && timelineData[index - 1]?.category === "Experience" && (
-                    <h4 className="text-xl font-semibold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-                      Education
-                    </h4>
-                  )}
+                  {item.category === "Education" &&
+                    timelineData[index - 1]?.category === "Experience" && (
+                      <h4 className="text-xl font-semibold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+                        Education
+                      </h4>
+                    )}
                   <div
                     className={`timeline-item ${
                       index % 2 === 0 ? "left-align" : "right-align"

@@ -8,10 +8,15 @@ import { About } from "./components/sections/About";
 import { Projects } from "./components/sections/Projects";
 import "./index.css";
 import { Contact } from "./components/sections/Contact";
+// Import for Tempo routes
+import routes from "./tempo-routes";
 
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+
+  // Add Tempo routes if in Tempo environment
+  const tempoRoutes = import.meta.env.VITE_TEMPO ? routes : [];
 
   return (
     <>
@@ -19,8 +24,30 @@ function App() {
       <div
         className={`min-h-screen transition-all duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
-        } bg-black text-gray-100`}
+        } bg-black text-gray-100 relative overflow-hidden animate-cosmic-background`}
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 10% 20%, rgba(21, 21, 21, 1) 0%, rgba(10, 10, 10, 1) 90%), radial-gradient(circle at 90% 80%, rgba(13, 13, 34, 0.8) 0%, rgba(10, 10, 10, 0) 70%)",
+        }}
       >
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div
+              key={i}
+              className="absolute rounded-full animate-pulse-glow"
+              style={{
+                width: Math.random() * 4 + 1 + "px",
+                height: Math.random() * 4 + 1 + "px",
+                backgroundColor: `rgba(${Math.random() * 100 + 155}, ${Math.random() * 100 + 155}, 255, ${Math.random() * 0.5 + 0.5})`,
+                left: Math.random() * 100 + "%",
+                top: Math.random() * 100 + "%",
+                animationDelay: Math.random() * 5 + "s",
+                animationDuration: Math.random() * 10 + 10 + "s",
+              }}
+            />
+          ))}
+        </div>
+        {/* Tempo routes would be used here if we had a router */}
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
         <Home />
