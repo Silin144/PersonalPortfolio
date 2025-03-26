@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import "tailwindcss";
+
 html,
 body {
   margin: 0;
@@ -56,8 +58,8 @@ body {
 
   .encrypted {
     opacity: 0.7;
-    color: #60a5fa;
-    text-shadow: 0 0 8px rgba(96, 165, 250, 0.5);
+    color: var(--accent-color);
+    text-shadow: 0 0 8px var(--primary-glow);
   }
 
   @keyframes float {
@@ -79,15 +81,16 @@ body {
   @keyframes pulse-glow {
     0%,
     100% {
-      box-shadow: 0 0 0 rgba(96, 165, 250, 0);
+      box-shadow: 0 0 0 var(--primary-glow);
     }
     50% {
-      box-shadow: 0 0 20px rgba(96, 165, 250, 0.6);
+      box-shadow: 0 0 20px var(--primary-glow);
     }
   }
 
   .animate-pulse-glow {
     animation: pulse-glow 3s ease-in-out infinite;
+    background-color: var(--accent-color);
   }
 
   @keyframes cosmic-background {

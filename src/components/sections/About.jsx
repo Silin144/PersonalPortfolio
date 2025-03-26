@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import Timeline from "../Timeline/Timeline";
 import modulusLogo from "../../assets/modulus.png";
 import shopifyLogo from "../../assets/shopify.png";
 import waterlooLogo from "../../assets/waterloo.png";
@@ -8,62 +9,75 @@ export const About = () => {
   const frontendSkills = ["React.js", "HTML", "CSS", "JavaScript", "Flask"];
   const backendSkills = ["Python", "SQL", "MySQL", "MongoDB", "Pandas"];
 
-  // Timeline data for dynamic rendering
-  const timelineData = [
+  const educationData = [
     {
-      id: 1,
-      logo: modulusLogo,
-      company: "Modulus Systems",
-      title: "Technical Intern",
-      location: "London, UK",
-      duration: "Nov 2022 - Dec 2022",
-      description:
-        "Contributed to an AI-based project predicting consumer behavior, reducing churn rates by 20%. Designed Python algorithms and integrated them into machine learning pipelines using TensorFlow and Scikit-learn, boosting model training speed by 30% and prediction accuracy by 10%.",
-      category: "Experience",
-    },
-    {
-      id: 2,
-      logo: modulusLogo,
-      company: "Modulus Systems",
-      title: "Intern",
-      location: "London, UK",
-      duration: "Apr 2021 - Jun 2021",
-      description:
-        "Enhanced digital campaigns, increasing monthly visitors by 75% (from 1,000 to 4,000) using Google Analytics and social media insights. Collaborated with teams to design promotional materials and improve online user engagement.",
-      category: "Experience",
-    },
-    {
-      id: 3,
-      logo: shopifyLogo,
-      company: "Dropshipping Online Store",
-      title: "Founder",
-      location: "Remote",
-      duration: "Jun 2019 - Dec 2019",
-      description:
-        "Built and managed a Shopify store generating $20,000 in revenue over six months across the USA, Canada, New Zealand, and the UK. Leveraged Facebook and Instagram ads for a 5% conversion rate and automated email campaigns to boost retention by 10%.",
-      category: "Experience",
-    },
-    {
-      id: 4,
+      date: "Sep 2024 - Present",
+      title: "University of Waterloo",
+      description: [
+        "Bachelor of Computer Science",
+        "Relevant Coursework:",
+        "Designing Functional Programs (Advanced)",
+        "Linear Algebra & Calculus",
+        "bject-Oriented Programming",
+        "Data Structures & Algorithms",
+        "Awards:",
+        "    President's Scholarship of Distinction"
+      ].join('\n'),
       logo: waterlooLogo,
-      company: "University of Waterloo",
-      title: "Bachelor of Computer Science",
-      location: "Waterloo, ON, Canada",
-      duration: "Sep 2024 - Present",
-      description:
-        "Relevant Coursework: Designing Functional Programs, Linear Algebra, Calculus, Object-Oriented Programming, Data Structures, Algorithms. Awards: President's Scholarship of Distinction.",
-      category: "Education",
     },
     {
-      id: 5,
+      date: "2020 - 2024",
+      title: "Modern School",
+      description: [
+        "High School Diploma, PCM-CS",
+        "Grade: 12th - 96.2%",
+        "Activities and Societies:",
+        "    Bits n' Bytes (CS Club)",
+        "    Science Club"
+      ].join('\n'),
       logo: modernSchoolLogo,
-      company: "Modern School",
-      title: "High School Diploma, PCM-CS",
-      location: "New Delhi, India",
-      duration: "2020 - 2024",
-      description:
-        "Grade: 12th - 96.2%. Activities and societies: Bits n' Bytes (CS Club), Science Club.",
-      category: "Education",
+    },
+  ];
+
+  const experienceData = [
+    {
+      date: "Nov 2022 - Dec 2022",
+      title: "Technical Intern at Modulus Systems",
+      description: [
+        "Contributed to an AI-based project predicting consumer behavior",
+        "Reduced churn rates by 20% through predictive analytics",
+        "Designed Python algorithms for machine learning pipelines",
+        "Integrated TensorFlow and Scikit-learn frameworks",
+        "Improved model training speed by 30%",
+        "Enhanced prediction accuracy by 10%"
+      ].join('\n'),
+      logo: modulusLogo,
+    },
+    {
+      date: "Apr 2021 - Jun 2021",
+      title: "Intern at Modulus Systems",
+      description: [
+        "Enhanced digital campaigns using data-driven strategies",
+        "Increased monthly visitors by 75% (1,000 to 4,000)",
+        "Utilized Google Analytics for visitor insights",
+        "Optimized social media engagement metrics",
+        "Collaborated on promotional material design",
+        "Improved overall online user engagement"
+      ].join('\n'),
+      logo: modulusLogo,
+    },
+    {
+      date: "Jun 2019 - Dec 2019",
+      title: "Founder, Dropshipping Online Store",
+      description: [
+        "Built and managed a successful Shopify store",
+        "Generated $20,000 revenue over six months",
+        "Operated across USA, Canada, NZ, and UK",
+        "Achieved 5% conversion rate through FB/IG ads",
+        "Implemented automated email campaigns",
+        "Increased customer retention by 10%"
+      ].join('\n'),
+      logo: shopifyLogo,
     },
   ];
 
@@ -119,104 +133,20 @@ export const About = () => {
             </div>
           </div>
 
-          {/* Timeline Section */}
+          {/* Experience Section */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold mb-10 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-              My Journey
+              Professional Experience
             </h3>
-            <div className="relative">
-              <style>
-                {`
-                  .timeline-line {
-                    position: absolute;
-                    width: 1px;
-                    height: 100%;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    background: rgba(59, 130, 246, 0.2);
-                    z-index: 0;
-                  }
-                  .timeline-item {
-                    position: relative;
-                    z-index: 1;
-                    display: flex;
-                    align-items: flex-start;
-                    width: 100%;
-                    margin-bottom: 3rem;
-                  }
-                  .timeline-content {
-                    width: 45%;
-                    background: rgba(0, 0, 0, 0.2);
-                    backdrop-filter: blur(8px);
-                    padding: 1rem;
-                    border-radius: 0.75rem;
-                    text-align: left;
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                  }
-                  .left-align .timeline-content {
-                    margin-right: auto;
-                  }
-                  .right-align .timeline-content {
-                    margin-left: auto;
-                  }
-                  .timeline-bullet {
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
-                    top: 50%;
-                    transform: translate(-50%, -50%);
-                    z-index: 10;
-                  }
-                `}
-              </style>
-              <div className="timeline-line"></div>
+            <Timeline data={experienceData} />
+          </div>
 
-              {timelineData.map((item, index) => (
-                <div key={item.id}>
-                  {/* Add "Experience" heading before the first Experience item */}
-                  {item.category === "Experience" && index === 0 && (
-                    <h4 className="text-xl font-semibold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-                      Experience
-                    </h4>
-                  )}
-                  {/* Add "Education" heading before the first Education item */}
-                  {item.category === "Education" &&
-                    timelineData[index - 1]?.category === "Experience" && (
-                      <h4 className="text-xl font-semibold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-                        Education
-                      </h4>
-                    )}
-                  <div
-                    className={`timeline-item ${
-                      index % 2 === 0 ? "left-align" : "right-align"
-                    }`}
-                  >
-                    <div className="timeline-content">
-                      <img
-                        src={item.logo}
-                        alt={`${item.company} Logo`}
-                        className="w-20 h-20 rounded-lg mb-4"
-                      />
-                      <p className="text-gray-300">
-                        {item.title}
-                        <br />
-                        {item.company}
-                        <br />
-                        {item.location}
-                        <br />
-                        {item.duration}
-                      </p>
-                      <p className="text-gray-300 mt-4 leading-relaxed">
-                        {item.description}
-                      </p>
-                    </div>
-                    <div className="timeline-bullet">
-                      <div className="w-3 h-3 bg-gradient-to-br from-blue-500 to-cyan-400 rounded-full z-10"></div>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
+          {/* Education Section */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold mb-10 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
+              Education
+            </h3>
+            <Timeline data={educationData} />
           </div>
         </div>
       </RevealOnScroll>

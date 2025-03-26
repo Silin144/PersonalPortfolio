@@ -13,7 +13,7 @@
     "@tailwindcss/vite": "^4.0.12",
     "emailjs-com": "^3.2.0",
     "framer-motion": "^11.18.2",
-    "ogl": "^0.0.102",
+    "ogl": "^1.0.11",
     "prop-types": "^15.8.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

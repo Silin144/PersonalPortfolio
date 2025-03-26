@@ -11,7 +11,6 @@ import { Contact } from "./components/sections/Contact";
 import Particles from "./components/Particles/Particles";
 // Import for Tempo routes
 import routes from "./tempo-routes";
-
 function App() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
@@ -45,8 +44,8 @@ function App() {
             cameraDistance={25}
           />
         </div>
-        <div className="relative z-2">
-          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+        <div className="relative" style={{ zIndex: 1 }}>
+          <div className="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" style={{ zIndex: -1 }}>
             {Array.from({ length: 20 }).map((_, i) => (
               <div
                 key={i}

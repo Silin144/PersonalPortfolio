@@ -235,8 +235,6 @@ const LetterGlitch = ({
     position: 'relative',
     width: '100%',
     height: '100%',
-    backgroundColor: 'transparent',
-    overflow: 'hidden',
     ...style
   };
 
@@ -262,7 +260,7 @@ const LetterGlitch = ({
     transform: 'translate(-50%, -50%)',
     width: '100%',
     maxWidth: '100%',
-    margin: '0 auto',
+    margin: '0 auto'
   };
 
   const outerVignetteStyle = {
