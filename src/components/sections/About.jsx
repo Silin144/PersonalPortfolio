@@ -4,22 +4,19 @@ import modulusLogo from "../../assets/modulus.png";
 import shopifyLogo from "../../assets/shopify.png";
 import waterlooLogo from "../../assets/waterloo.png";
 import modernSchoolLogo from "../../assets/modern.jpg";
+import methicareLogo from "../../assets/methicare.jpeg";
+import DownloadResume from "../DownloadResume/DownloadResume";
 
 export const About = () => {
-  const frontendSkills = ["React.js", "HTML", "CSS", "JavaScript", "Flask"];
-  const backendSkills = ["Python", "SQL", "MySQL", "MongoDB", "Pandas"];
+  const frontendSkills = ["React.js", "HTML", "CSS", "JavaScript", "Node.js"];
+  const backendSkills = ["Python", "C/C++", "SQL", "MySQL", "MongoDB", "Docker", "TensorFlow", "Scikit-learn", "Flask"];
 
   const educationData = [
     {
       date: "Sep 2024 - Present",
       title: "University of Waterloo",
       description: [
-        "Bachelor of Computer Science",
-        "Technical Skills:",
-        "Languages & Web: Python, C/C++, SQL, R, Racket, JavaScript, Node.js, HTML, CSS",
-        "APIs/Frameworks: Shopify API, Flask, OpenCV, MediaPipe, React.js, REST API",
-        "Technologies: TensorFlow, Scikit-learn, Git, Pandas, MySQL, MongoDB, Docker, Power BI",
-        "Google Analytics, Maven, MS Office Suite, Canva, Klaviyo, NumPy"
+        "Bachelor of Computer Science"
       ].join('\n'),
       logo: waterlooLogo,
     },
@@ -61,7 +58,7 @@ export const About = () => {
         "Added local healthcare provider access via APIs, enabling 1,500 additional consultations annually",
         "Connected 50+ providers, increasing consultation coverage by 30%"
       ].join('\n'),
-      logo: modulusLogo,
+      logo: methicareLogo,
     },
     {
       date: "Jun 2019 - Dec 2019",
