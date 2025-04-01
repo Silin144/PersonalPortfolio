@@ -15,13 +15,11 @@ export const About = () => {
       title: "University of Waterloo",
       description: [
         "Bachelor of Computer Science",
-        "Relevant Coursework:",
-        "Designing Functional Programs (Advanced)",
-        "Linear Algebra & Calculus",
-        "bject-Oriented Programming",
-        "Data Structures & Algorithms",
-        "Awards:",
-        "    President's Scholarship of Distinction"
+        "Technical Skills:",
+        "Languages & Web: Python, C/C++, SQL, R, Racket, JavaScript, Node.js, HTML, CSS",
+        "APIs/Frameworks: Shopify API, Flask, OpenCV, MediaPipe, React.js, REST API",
+        "Technologies: TensorFlow, Scikit-learn, Git, Pandas, MySQL, MongoDB, Docker, Power BI",
+        "Google Analytics, Maven, MS Office Suite, Canva, Klaviyo, NumPy"
       ].join('\n'),
       logo: waterlooLogo,
     },
@@ -41,28 +39,27 @@ export const About = () => {
 
   const experienceData = [
     {
-      date: "Nov 2022 - Dec 2022",
-      title: "Technical Intern at Modulus Systems",
+      date: "Apr 2024 - Jun 2024",
+      title: "Technical/Digital Marketing Intern at Modulus Systems UK",
       description: [
-        "Contributed to an AI-based project predicting consumer behavior",
-        "Reduced churn rates by 20% through predictive analytics",
-        "Designed Python algorithms for machine learning pipelines",
-        "Integrated TensorFlow and Scikit-learn frameworks",
-        "Improved model training speed by 30%",
-        "Enhanced prediction accuracy by 10%"
+        "Developed AI systems with Python, TensorFlow, and Scikit-learn, reducing churn by 20%",
+        "Engineered tailored ML algorithms optimizing data processing workflows for 20+ analysts",
+        "Executed digital campaigns using Google Analytics, driving 1,000 additional monthly visitors with 33% increase",
+        "Analyzed consumer behavior with statistical methods, improving model reliability by 15%",
+        "Promoted social media channels via targeted ads, growing follower base by 30%",
+        "Presented data-driven insights using Power BI, increasing strategic decision adoption by 15%"
       ].join('\n'),
       logo: modulusLogo,
     },
     {
-      date: "Apr 2021 - Jun 2021",
-      title: "Intern at Modulus Systems",
+      date: "May 2023 - Aug 2023",
+      title: "Telemedicine Systems Intern at Mentors Ethicare",
       description: [
-        "Enhanced digital campaigns using data-driven strategies",
-        "Increased monthly visitors by 75% (1,000 to 4,000)",
-        "Utilized Google Analytics for visitor insights",
-        "Optimized social media engagement metrics",
-        "Collaborated on promotional material design",
-        "Improved overall online user engagement"
+        "Spearheaded Python/Flask-based telemedicine portal development, improving satisfaction by 20%",
+        "Integrated MySQL medical records system, reducing access time by 40% for 500+ daily records",
+        "Enhanced user accessibility with multilingual support, increasing platform adoption by 10%",
+        "Added local healthcare provider access via APIs, enabling 1,500 additional consultations annually",
+        "Connected 50+ providers, increasing consultation coverage by 30%"
       ].join('\n'),
       logo: modulusLogo,
     },
@@ -70,12 +67,11 @@ export const About = () => {
       date: "Jun 2019 - Dec 2019",
       title: "Founder, Dropshipping Online Store",
       description: [
-        "Built and managed a successful Shopify store",
-        "Generated $20,000 revenue over six months",
-        "Operated across USA, Canada, NZ, and UK",
-        "Achieved 5% conversion rate through FB/IG ads",
-        "Implemented automated email campaigns",
-        "Increased customer retention by 10%"
+        "Launched a Shopify store targeting four markets, generating $20,000 in revenue within six months",
+        "Optimized Facebook and Instagram ads with A/B testing, achieving 5% conversion rate",
+        "Implemented Klaviyo automated emails for cart recovery, reducing abandonment by 15%",
+        "Managed supply chain logistics with vendor negotiations, reducing costs by 15%",
+        "Conducted product research using market analysis, boosting sales margins by 12%"
       ].join('\n'),
       logo: shopifyLogo,
     },

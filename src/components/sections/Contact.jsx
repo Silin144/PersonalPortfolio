@@ -13,24 +13,38 @@ export const Contact = () => {
     emailjs.init("q32j_dMJmIB652ipJ"); // Initialize EmailJS with your public API key
   }, []);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm(
+    try {
+      // Create a template params object that explicitly includes sender info
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: `
+=== SENDER INFORMATION ===
+Name: ${formData.name}
+Email: ${formData.email}
+
+=== MESSAGE CONTENT ===
+${formData.message}
+========================`,
+        to_name: "Silin",  // Your name as the recipient
+      };
+
+      const result = await emailjs.send(
         "service_8ucwkgo",   // Service ID
         "template_z12zj9a",  // Template ID
-        e.target,
-        "q32j_dMJmIB652ipJ"  // Public API Key (passed again if required by sendForm)
-      )
-      .then((result) => {
-        alert("Message Sent!");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch((error) => {
-        console.error("EmailJS Error:", error);
-        alert("Oops! Something went wrong. Please try again.");
-      });
+        templateParams,
+        "q32j_dMJmIB652ipJ"  // Public API Key
+      );
+
+      alert("Message Sent!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+      alert("Oops! Something went wrong. Please try again.");
+    }
   };
 
   return (
