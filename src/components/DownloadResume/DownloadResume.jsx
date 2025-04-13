@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import './DownloadResume.css';
+import resumePdf from '../../assets/Silin.pdf';
 
 const DownloadResume = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -17,23 +18,17 @@ const DownloadResume = () => {
     setTimeout(() => setParticles([]), 1000);
   };
 
-  const handleDownload = async () => {
+  const handleDownload = () => {
     setIsDownloading(true);
     createParticles();
     
-    try {
-      const response = await fetch('/src/assets/Silin.pdf');
-      const blob = await response.blob();
-      const url = window.URL.createObjectURL(blob);
-      const link = document.createElement('a');
-      link.href = url;
-      link.download = 'Silin-Resume.pdf';
-      document.body.appendChild(link);
-      link.click();
-      document.body.removeChild(link);
-    } catch (error) {
-      console.error('Download failed:', error);
-    }
+    // Create a link element and trigger download
+    const link = document.createElement('a');
+    link.href = resumePdf;
+    link.download = 'Silin-Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
     setTimeout(() => setIsDownloading(false), 2000);
   };
