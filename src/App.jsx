@@ -9,6 +9,7 @@ import { Projects } from "./components/sections/Projects";
 import "./index.css";
 import { Contact } from "./components/sections/Contact";
 import Particles from "./components/Particles/Particles";
+import { Footer } from "./components/Footer";
 // Import for Tempo routes
 import routes from "./tempo-routes";
 function App() {
@@ -69,6 +70,7 @@ function App() {
           <About />
           <Projects />
           <Contact />
+          <Footer />
         </div>
       </div>
     </>
