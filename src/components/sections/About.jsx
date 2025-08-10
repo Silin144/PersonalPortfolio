@@ -57,14 +57,14 @@ export const About = () => {
     },
     {
       date: "Apr 2024 - Jun 2024",
-      title: "Technical/Digital Marketing Intern at Modulus Systems UK",
+      title: "Software Developer Intern at Modulus Systems UK",
       description:
         "Built ML systems with Python/TensorFlow to reduce churn by 20% and streamline workflows for 20+ analysts, while driving +33% traffic via analytics-led campaigns and delivering Power BI insights adopted across teams.",
       logo: modulusLogo,
     },
     {
       date: "May 2023 - Aug 2023",
-      title: "Telemedicine Systems Intern at Mentors Ethicare",
+      title: "Software Developer Intern at Mentors Ethicare",
       description:
         "Developed a HIPAA-compliant Python/Flask telemedicine portal with MySQL that reduced medical record access time by 40% and improved adoption through multilingual UX and provider integrations.",
       logo: methicareLogo,
