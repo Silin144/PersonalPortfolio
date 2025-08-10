@@ -53,9 +53,7 @@ const TimelineItem = ({ date, title, description, logo, index }) => {
   };
 
   const formatDescription = (desc) => {
-    return desc.split('\n').map((line, i) => (
-      <span key={i}>{line}</span>
-    ));
+    return <span>{desc}</span>;
   };
 
   return (

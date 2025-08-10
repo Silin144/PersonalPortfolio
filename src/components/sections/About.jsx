@@ -5,71 +5,75 @@ import shopifyLogo from "../../assets/shopify.png";
 import waterlooLogo from "../../assets/waterloo.png";
 import modernSchoolLogo from "../../assets/modern.jpg";
 import methicareLogo from "../../assets/methicare.jpeg";
+import policyAdvisorLogo from "../../assets/PolicyAdvisor.jpeg";
 import DownloadResume from "../DownloadResume/DownloadResume";
 
 export const About = () => {
-  const frontendSkills = ["React.js", "HTML", "CSS", "JavaScript", "Node.js"];
-  const backendSkills = ["Python", "C/C++", "SQL", "MySQL", "MongoDB", "Docker", "TensorFlow", "Scikit-learn", "Flask"];
+  const frontendSkills = [
+    "React.js",
+    "Next.js",
+    "TypeScript",
+    "JavaScript",
+    "HTML",
+    "CSS"
+  ];
+  const backendSkills = [
+    "Python",
+    "C/C++",
+    "SQL",
+    "MySQL",
+    "MongoDB",
+    "Docker",
+    "TensorFlow",
+    "PyTorch",
+    "Scikit-learn",
+    "Flask",
+    "Django",
+    "FastAPI",
+    "LangChain",
+    "Hugging Face",
+    "OpenAI API",
+    "Google Gemini API"
+  ];
 
   const educationData = [
     {
-      date: "Sep 2024 - Present",
+      date: "Sep 2024 - May 2029",
       title: "University of Waterloo",
       description: [
-        "Bachelor of Computer Science"
+        "Honours Bachelor of Computer Science, Co-op"
       ].join('\n'),
       logo: waterlooLogo,
-    },
-    {
-      date: "2020 - 2024",
-      title: "Modern School",
-      description: [
-        "High School Diploma, PCM-CS",
-        "Grade: 12th - 96.2%",
-        "Activities and Societies:",
-        "    Bits n' Bytes (CS Club)",
-        "    Science Club"
-      ].join('\n'),
-      logo: modernSchoolLogo,
     },
   ];
 
   const experienceData = [
     {
+      date: "May 2025 - Aug 2025",
+      title: "Software Developer Intern at PolicyAdvisor",
+      description:
+        "Architected a Next.js/Python insurance automation platform with Gemini AI (99%+ extraction accuracy), dynamic document generation, and an AI voicebot scheduler—cutting manual processing by 98% and bookings workload by 90%. Also modernized a multi-provider comparison experience with robust caching and error handling.",
+      logo: policyAdvisorLogo,
+    },
+    {
       date: "Apr 2024 - Jun 2024",
       title: "Technical/Digital Marketing Intern at Modulus Systems UK",
-      description: [
-        "Developed AI systems with Python, TensorFlow, and Scikit-learn, reducing churn by 20%",
-        "Engineered tailored ML algorithms optimizing data processing workflows for 20+ analysts",
-        "Executed digital campaigns using Google Analytics, driving 1,000 additional monthly visitors with 33% increase",
-        "Analyzed consumer behavior with statistical methods, improving model reliability by 15%",
-        "Promoted social media channels via targeted ads, growing follower base by 30%",
-        "Presented data-driven insights using Power BI, increasing strategic decision adoption by 15%"
-      ].join('\n'),
+      description:
+        "Built ML systems with Python/TensorFlow to reduce churn by 20% and streamline workflows for 20+ analysts, while driving +33% traffic via analytics-led campaigns and delivering Power BI insights adopted across teams.",
       logo: modulusLogo,
     },
     {
       date: "May 2023 - Aug 2023",
       title: "Telemedicine Systems Intern at Mentors Ethicare",
-      description: [
-        "Spearheaded Python/Flask-based telemedicine portal development, improving satisfaction by 20%",
-        "Integrated MySQL medical records system, reducing access time by 40% for 500+ daily records",
-        "Enhanced user accessibility with multilingual support, increasing platform adoption by 10%",
-        "Added local healthcare provider access via APIs, enabling 1,500 additional consultations annually",
-        "Connected 50+ providers, increasing consultation coverage by 30%"
-      ].join('\n'),
+      description:
+        "Developed a HIPAA-compliant Python/Flask telemedicine portal with MySQL that reduced medical record access time by 40% and improved adoption through multilingual UX and provider integrations.",
       logo: methicareLogo,
     },
     {
       date: "Jun 2019 - Dec 2019",
       title: "Founder, Dropshipping Online Store",
-      description: [
-        "Launched a Shopify store targeting four markets, generating $20,000 in revenue within six months",
-        "Optimized Facebook and Instagram ads with A/B testing, achieving 5% conversion rate",
-        "Implemented Klaviyo automated emails for cart recovery, reducing abandonment by 15%",
-        "Managed supply chain logistics with vendor negotiations, reducing costs by 15%",
-        "Conducted product research using market analysis, boosting sales margins by 12%"
-      ].join('\n'),
+      description:
+        "Founded and scaled a Shopify store to $20K in 6 months using paid ads (5% CVR) and Klaviyo automations, while optimizing supply chain and product selection to lift margins and reduce costs.",
       logo: shopifyLogo,
     },
   ];

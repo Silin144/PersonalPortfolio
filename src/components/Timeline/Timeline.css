@@ -1,6 +1,6 @@
 .timeline-container {
   position: relative;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 4rem auto;
   padding: 2rem;
   perspective: 2000px;
@@ -44,7 +44,7 @@
 
 .timeline-item {
   position: relative;
-  width: 50%;
+  width: 48%;
   padding: 2rem;
   box-sizing: border-box;
   margin: 2rem 0;
@@ -56,7 +56,7 @@
 }
 
 .timeline-item.right {
-  left: 50%;
+  left: 52%;
   padding-left: 3rem;
 }
 
