@@ -15,8 +15,8 @@ export const Projects = () => {
     };
 
     // Start preloading immediately
-    preloadGif("/src/assets/viq.gif", "viq");
-    preloadGif("/src/assets/Moosic.gif", "moosic");
+    preloadGif("/viq.gif", "viq");
+    preloadGif("/Moosic.gif", "moosic");
   }, []);
   return (
     <section
@@ -88,7 +88,7 @@ export const Projects = () => {
                   </div>
                 ) : (
                   <img 
-                    src="/src/assets/viq.gif" 
+                    src="/viq.gif" 
                     alt="Insurance Platform Demo" 
                     className="w-full h-auto"
                   />
@@ -131,7 +131,7 @@ export const Projects = () => {
                   </div>
                 ) : (
                   <img 
-                    src="/src/assets/Moosic.gif" 
+                    src="/Moosic.gif" 
                     alt="Moosic Demo" 
                     className="w-full h-auto"
                   />
@@ -180,7 +180,7 @@ export const Projects = () => {
               {/* Demo Image */}
               <div className="mb-4 rounded-lg overflow-hidden border border-white/10">
                 <img 
-                  src="/src/assets/PersonalPortfolio.png" 
+                  src="/PersonalPortfolio.png" 
                   alt="Personal Portfolio Demo" 
                   className="w-full h-auto"
                 />
@@ -226,7 +226,7 @@ export const Projects = () => {
               {/* Demo Image */}
               <div className="mb-4 rounded-lg overflow-hidden border border-white/10">
                 <img 
-                  src="/src/assets/rps.png" 
+                  src="/rps.png" 
                   alt="Rock Paper Scissors Demo" 
                   className="w-full h-auto"
                 />
