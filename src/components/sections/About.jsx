@@ -52,28 +52,28 @@ export const About = () => {
       date: "May 2025 - Aug 2025",
       title: "Software Developer Intern at PolicyAdvisor",
       description:
-        "Architected a Next.js/Python insurance automation platform with Gemini AI (99%+ extraction accuracy), dynamic document generation, and an AI voicebot scheduler—cutting manual processing by 98% and bookings workload by 90%. Also modernized a multi-provider comparison experience with robust caching and error handling.",
+        "🤖 Automated insurance workflows with AI",
       logo: policyAdvisorLogo,
     },
     {
       date: "Apr 2024 - Jun 2024",
       title: "Software Developer Intern at Modulus Systems UK",
       description:
-        "Built ML systems with Python/TensorFlow to reduce churn by 20% and streamline workflows for 20+ analysts, while driving +33% traffic via analytics-led campaigns and delivering Power BI insights adopted across teams.",
+        "📊 Streamlined analytics for teams with ML",
       logo: modulusLogo,
     },
     {
       date: "May 2023 - Aug 2023",
       title: "Software Developer Intern at Mentors Ethicare",
       description:
-        "Developed a HIPAA-compliant Python/Flask telemedicine portal with MySQL that reduced medical record access time by 40% and improved adoption through multilingual UX and provider integrations.",
+        "🌐 Enabled secure, multilingual telemedicine",
       logo: methicareLogo,
     },
     {
       date: "Jun 2019 - Dec 2019",
       title: "Founder, Dropshipping Online Store",
       description:
-        "Founded and scaled a Shopify store to $20K in 6 months using paid ads (5% CVR) and Klaviyo automations, while optimizing supply chain and product selection to lift margins and reduce costs.",
+        "🚀 Scaled Shopify sales to $20K",
       logo: shopifyLogo,
     },
   ];
