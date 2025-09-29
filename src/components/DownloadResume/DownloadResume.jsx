@@ -22,13 +22,8 @@ const DownloadResume = () => {
     setIsDownloading(true);
     createParticles();
     
-    // Create a link element and trigger download
-    const link = document.createElement('a');
-    link.href = resumePdf;
-    link.download = 'Silin-Resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Open PDF in a new tab instead of downloading
+    window.open(resumePdf, '_blank');
 
     setTimeout(() => setIsDownloading(false), 2000);
   };
