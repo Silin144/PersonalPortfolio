@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import './DownloadResume.css';
-import resumePdf from '../../assets/Silin.pdf';
+import resumePdf from '../../assets/resume.pdf';
 
 const DownloadResume = () => {
   const [isDownloading, setIsDownloading] = useState(false);
@@ -18,14 +18,17 @@ const DownloadResume = () => {
     setTimeout(() => setParticles([]), 1000);
   };
 
-  const handleDownload = () => {
+  const handleDownload = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
     setIsDownloading(true);
     createParticles();
     
     // Open PDF in a new tab instead of downloading
     window.open(resumePdf, '_blank');
 
-    setTimeout(() => setIsDownloading(false), 2000);
+    setTimeout(() => setIsDownloading(false), 500);
   };
 
   return (
@@ -62,7 +65,7 @@ const DownloadResume = () => {
           {isDownloading ? (
             <>
               <DownloadIcon className="animate-bounce" />
-              Downloading...
+              Opening...
             </>
           ) : (
             <>
